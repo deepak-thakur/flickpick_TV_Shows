@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_frame_image_detail">6dp</dimen>
+    <dimen name="padding_tag_detail_red">4dp</dimen>
+    <dimen name="text_size_tag_detail_red">18sp</dimen>
+
+    <dimen name="list_item_review_margin">6dp</dimen>
+    <dimen name="list_item_review_padding">6dp</dimen>
+
+    <dimen name="list_item_trailer_margin">6dp</dimen>
+    <dimen name="list_item_trailer_padding">6dp</dimen>
+
+    <dimen name="list_item_movie_poster_width">185dp</dimen>
+    <dimen name="list_item_movie_poster_height">277dp</dimen>
+
+    <dimen name="list_item_movie_poster_width_land">300dp</dimen>
+    <dimen name="list_item_movie_poster_height_land">451dp</dimen>
+
+    <dimen name="list_item_movie_poster_width_xlarge">342dp</dimen>
+    <dimen name="list_item_movie_poster_height_xlarge">513dp</dimen>
+
+    <dimen name="model_margin_6">6dp</dimen>
+    <dimen name="model_margin_4">4dp</dimen>
+    <dimen name="model_padding_8">8dp</dimen>
+    <dimen name="model_text_size_18">18sp</dimen>
+
+
+
+
+    <dimen name="list_item_sw600_width">300dp</dimen>
+    <dimen name="list_item_sw600_height">450dp</dimen>
+</resources>

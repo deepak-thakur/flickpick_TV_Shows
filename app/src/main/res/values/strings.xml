@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">FlickPick</string>
+    <string name="data_not_avaiable_are_you_network_connection">Data not available.\nCheck you network connection.</string>
+    <string name="image_poster">Image Poster</string>
+
+    <string name="sort">Sort By</string>
+    <string name="bydeepak">By Deepak Thakur</string>
+    <string name="madewith">Made With</string>
+    <string name="popularity">Popular</string>
+    <string name="splash_1">Popular</string>
+    <string name="splash_2">The Home of Entertainment</string>
+    <string name="top_rated">Top rated</string>
+    <string name="title">Title:</string>
+    <string name="plot_synopsis">Plot Synopsis:</string>
+    <string name="user_rating">User Rating:</string>
+    <string name="release_date">Release Date:</string>
+    <string name="missing_api_key">Missing the api key</string>
+    <string name="retry">Retry</string>
+    <string name="reviews">Reviews:</string>
+    <string name="author">Author:</string>
+    <string name="no_reviews">No reviews</string>
+    <string name="trailers">Trailers</string>
+    <string name="image_trailer">Image Trailer</string>
+    <string name="no_trailers">No trailers</string>
+    <string name="share">Share</string>
+    <string name="favorites">Favorites</string>
+    <string name="tv_show">TV Shows</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="no_favoriyes_yet">No favorites yet…</string>
+    <string name="toast_save">Movie saved to Favorites</string>
+    <string name="toast_delete">Movie deleted from Favorites</string>
+    <string name="toast_in_favorites">This movie is already in Favorites!</string>
+    <string name="image_splash">Image Splash</string>
+    <string name="save_image">Save Image</string>
+    <string name="click_to_enlarge_image">Tap to enlarge image</string>
+    <string name="share_trailer">Share Movie trailer</string>
+    <string name="unknow_uri">Unknow uri: </string>
+    <string name="failed_insert_row">Failed to insert row into: </string>
+
+</resources>

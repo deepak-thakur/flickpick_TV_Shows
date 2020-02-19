@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_sort"
+        android:orderInCategory="1"
+        android:title="@string/sort"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/popularity"
+                android:orderInCategory="1"
+                android:title="@string/popularity"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/top_rated"
+                android:orderInCategory="2"
+                android:title="@string/top_rated"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/favorites"
+                android:orderInCategory="2"
+                android:title="@string/favorites"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/tv_shows"
+                android:orderInCategory="3"
+                android:title="@string/now_playing"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+    </item>
+</menu>
