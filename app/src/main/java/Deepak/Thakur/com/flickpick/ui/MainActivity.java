@@ -35,6 +35,7 @@ import Deepak.Thakur.com.flickpick.data.MovieContract;
 import Deepak.Thakur.com.flickpick.interfaces.AsynTaskCompleteListeningMovie;
 import Deepak.Thakur.com.flickpick.model.Movie;
 import Deepak.Thakur.com.flickpick.utils.FetchMyDataTask;
+import Deepak.Thakur.com.flickpick.utils.MovieJsonUtils;
 import Deepak.Thakur.com.flickpick.utils.MovieUrlUtils;
 
 public class MainActivity extends AppCompatActivity implements MovieAdapter.MovieClickListener,
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
     public static Button btn_retry;
     @SuppressLint("StaticFieldLeak")
     public static TextView tv_no_data;
+    public static Movie ReceivedMovieData;
 
     Boolean isScrolling = false;
     int currentItem,scrolledItem,totalItems;
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         setContentView(R.layout.activity_main);
         mRecyclerView = findViewById(R.id.rv_main);
         btn_retry = findViewById(R.id.btn_retry);
-        gridmanager = new GridLayoutManager(this, 3);
+        gridmanager = new GridLayoutManager(this, 2);
 
         mRecyclerView.setLayoutManager(gridmanager);
         mRecyclerView.setHasFixedSize(true);
@@ -353,21 +355,33 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
 
         @Override
         public void onTaskComplete(Movie[] result) {
+            ReceivedMovieData = new Movie();
+           int tempPage = ReceivedMovieData.getmPage(page);
             if (result != null) {
                 mRecyclerView.setVisibility(View.VISIBLE);
                 hideProgressAndTextview();
                 mMovie = result;
 //                MovieAdapter movieAdapter = new MovieAdapter(mMovie, MainActivity.this, MainActivity.this);
 //                mRecyclerView.setLayoutManager(manager);
-               MovieAdapter movieAdapter1 = new MovieAdapter(MainActivity.mMovie,MainActivity.this,MainActivity.this);
-                movieAdapter1.notifyDataSetChanged();
-                mRecyclerView.setAdapter(movieAdapter1);
+                if( tempPage ==1){
+                MovieAdapter movieAdapter = new MovieAdapter(mMovie, MainActivity.this, MainActivity.this);
+                    movieAdapter.notifyDataSetChanged();
+                    mRecyclerView.setAdapter(movieAdapter);
+
+
+                }else {
+                    MovieAdapter movieAdapter1 = new MovieAdapter(mMovie,MainActivity.this,MainActivity.this);
+                    movieAdapter1.notifyDataSetChanged();
+                    mRecyclerView.setAdapter(movieAdapter1);
+                }
+
             }
         }
 
 
 
     }
+
 
 
 

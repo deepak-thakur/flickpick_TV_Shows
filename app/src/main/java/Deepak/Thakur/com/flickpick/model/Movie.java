@@ -12,6 +12,7 @@ public class Movie implements Parcelable{
     private String mRATING;
     private String mRELEASEDATE;
     private  String mSHOWS;
+    private  String mPage;
 
 
     public Movie(){
@@ -26,6 +27,7 @@ public class Movie implements Parcelable{
         mRATING = in.readString();
         mRELEASEDATE = in.readString();
         mSHOWS = in.readString();
+        mPage = in.readString();
 
     }
 
@@ -83,7 +85,12 @@ public class Movie implements Parcelable{
     public void setmShows(String mShows) {
         this.mSHOWS = mShows;
     }
-
+    public  void  setMpage(String mPage) {
+        this.mPage = mPage;
+    }
+    public int getmPage(int mPage){
+        return  mPage;
+    }
 
     public String getmReleaseDate() {
         return mRELEASEDATE;
@@ -109,6 +116,7 @@ public class Movie implements Parcelable{
         dest.writeString(mRATING);
         dest.writeString(mRELEASEDATE);
         dest.writeString(mSHOWS);
+        dest.writeString(mPage);
 
     }
 }

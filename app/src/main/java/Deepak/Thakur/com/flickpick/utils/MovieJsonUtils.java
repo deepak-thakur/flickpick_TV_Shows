@@ -1,6 +1,7 @@
 package Deepak.Thakur.com.flickpick.utils;
 
 import android.app.Application;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,14 +34,18 @@ public class MovieJsonUtils extends Application{
     private static final String MOVIE_TRAILER_RESULTS = "results";
     private static final String MOVIE_TRAILER_NAME = "name";
     private static final String MOVIE_TRAILER_SOURCE = "key";
-
+    private static final String Page = "page";
 
 
     static Movie[] parseJsonMovieForMain(String jsonMoviesData) throws JSONException {
 
         JSONObject jsonRoot = new JSONObject(jsonMoviesData);
+        String pageNumber = jsonRoot.getString("page");
+        Log.d("page is",pageNumber);
         JSONArray jsonArrayResult = jsonRoot.getJSONArray(MOVIE_RESULTS);
         Movie[] result = new Movie[jsonArrayResult.length()];
+
+
         for (int i = 0; i < jsonArrayResult.length(); i++) {
             Movie movie = new Movie();
             movie.setmId(jsonArrayResult.getJSONObject(i).optString(MOVIE_ID));
@@ -49,7 +54,7 @@ public class MovieJsonUtils extends Application{
             movie.setmPlot(jsonArrayResult.getJSONObject(i).optString(MOVIE_PLOT));
             movie.setmRating(jsonArrayResult.getJSONObject(i).optString(MOVIE_RATING));
             movie.setmShows(jsonArrayResult.getJSONObject(i).optString(TOP_RATED_SHOWS));
-
+            movie.setMpage(pageNumber);
             movie.setmReleaseDate(jsonArrayResult.getJSONObject(i).optString(MOVIE_RELEASE_DATE));
             result[i] = movie;
         }
